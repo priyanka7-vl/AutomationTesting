@@ -1,0 +1,71 @@
+Software Testing Exercise-1::
+1.What is software testing?
+   - Software testing is a process of evaluating the functionality of a software application and to check whether the developed application is working correctly or not and to identify defects and make it defect free to produce with best quality.
+
+2.Types of testing methods?
+   1.Static testing:
+    - Static testing is a method of verification in software project.
+   2.Dynamic testing:
+    - Dynamic testing is a method of validation in a software project.
+
+3.Difference between verification and validation?
+   1.verification:
+    - Verification is the process of checking the developing project.
+    - Verification is to verify whether we are developing the project rightly or not.
+    - Verification is the process of verifying the documents,design,code and program
+    - It involves before executing the code.
+    - It checks whether the software confirms to specifications or not.
+    - It uses methods like reviews,desk-checking.
+    - It finds the bugs early in the development cycle.
+    - Target is application,complete design and database design.
+    - It is done before the validation process.
+2.validation:
+    - Validation is the process of checking the developed project.
+    - Validation is to validate which we have developed the project rightly or not.
+    - It is the dynamic testing of application.
+    - It involves after the code execution.
+    - It can find bugs in the verification process.
+    - It checks the software met specified requirements or not.
+    - It uses methods like black box testing,white box testing and non-functional testing.
+    - Target is an actual product.
+    - It is done after the verification process.
+
+4.What is the functional testing and give me the types of functional testing?
+Functional testing:
+  - Functional testing is the process of checking the functionality of the system met with specified requirements.
+  - To check each functionality with appropriate input to verify whether actual output match with expected one.
+Types of functional testing:
+1.Unit testing:
+  - It is to check each module of source code and every unit of the system.
+  - Testing is done at unit level i.e individually done for each component separately.
+2.Integration Testing:
+  - It is the process of testing data connectivity and data transfer between each unit tested modules.
+  - It has divided into two categories:
+          a.top-down approach:
+	- It is the process of testing from main module to sub module.
+	- If the sub module is not developed then a temporary program STUB is used to simulate the sub module.
+           b.bottom-up approach
+	- It is the process of testing from sub module to main module.
+	- If the main module is not developed then a temporary program Drivers is used to simulate the main module.
+3.System testing:
+  - It is also called as end to end testing.
+  - Testing integrated system is working properly or not on all target systems.
+4.Acceptance testing:
+  - It is for delivering to end user i.e acceptable by customer and receiving payments.
+
+5.What is the non-functional testing and give me the types of non-functional testing?
+Non-Functional testing:
+  - Non-functional testing is the process of checking how fastly the system is responding to the request.
+Types of non-functional testing:
+1.Performance testing:
+  - It is to verify whether the developed software is working correctly under workload also.
+2.Load testing:
+  - It is to know that how system works on normal and peak load conditions.
+3.Scalability testing
+  - How much the application can be scalable in other systems
+4.Security testing
+  - It is to know how much the system's data can be protected and maintained.
+5.Compatibility testing
+  - Whether the application is working as expected in different environments.
+6.Usability testing:
+  - Whether the builded software is user friendly or not.
