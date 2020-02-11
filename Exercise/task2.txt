@@ -1,0 +1,290 @@
+Black box testing::
+
+1.Equivalence Testing:
+Equivalence Partitioning is also known as Equivalence Class Partitioning. In equivalence partitioning, inputs to the software or system are divided into groups that are expected to exhibit similar behavior.
+
+Example:
+
+Assume, we have to test a field which accepts Age: 18 – 56
+
+Valid Input: 18 – 56
+
+Invalid Input: less than or equal to 17 (<=17), greater than or equal to 57 (>=57)
+
+Valid Class: 18 – 56 = Pick any one input test data from 18 – 56
+
+Invalid Class 1: <=17 = Pick any one input test data less than or equal to 17
+
+Invalid Class 2: >=57 = Pick any one input test data greater than or equal to 57
+
+We have one valid and two invalid conditions here.
+
+
+
+2.Boundary Value analysis:
+Boundary value analysis (BVA) is based on testing the boundary values of valid and invalid partitions. The behavior at the edge of each equivalence partition is more likely to be incorrect than the behavior within the partition, so boundaries are an area where testing is likely to yield defects.
+
+Example:
+
+Assume, we have to test a field which accepts Age: 18 – 56
+
+Minimum boundary value is:: 18
+
+Maximum boundary value is:: 56
+
+Valid Inputs: 18,19,55,56
+
+Invalid Inputs: 17 and 57
+
+Test case 1: Enter the value 17 (18-1) = Invalid
+
+Test case 2: Enter the value 18 = Valid
+
+Test case 3: Enter the value 19 (18+1) = Valid
+
+Test case 4: Enter the value 55 (56-1) = Valid
+
+Test case 5: Enter the value 56 = Valid
+
+Test case 6: Enter the value 57 (56+1) =Invalid
+
+
+
+3.Cause Effect Graphing::
+Cause effect graphing is a mapping technique, which is used to analyse combination of input conditions and effects may be through of as the output. The Cause-Effect Graphing technique derives the least number of test cases to cover 100% of the functional requirements to improve the quality of test coverage.
+
+Example:
+1. “Sun” is a cause for “heat”. 
+2.“Fire” is a cause for “heat”.
+3. “Sun” is a cause for “sunburn”.
+
+So, there are 3 cause-effect relations in this example:
+(Sun->heat)
+(Fire->heat)
+(Sun->sunburn)
+
+
+
+
+4.Error Guessing::
+The test cases for finding issues in the software are written based on the prior testing experience with similar applications. So, the scope of the test cases would generally depend upon the kind of testing Test Analyst was involved in the past. The Error Guessing technique does not follow any specific rules.
+
+Example 1:
+
+If the Analyst guesses that the login page is error-prone, then the testers will write detailed test cases concentrating on the login page. Testers can think of a variety of combinations of data to test the login page.
+
+To design test cases based on the Error Guessing technique, the Analyst can use past experiences to identify the conditions.
+
+This technique can be used at any level of testing and for testing the common mistakes like:
+
+- Divide by zero
+- Entering blank spaces in the text fields
+- Pressing the submit button without entering values.
+- Uploading files exceeding maximum limits.
+- Null pointer exception.
+- Invalid parameters
+
+Example 2:
+
+Suppose there is a requirement stating that the mobile number should be numeric and not less than 10 characters. And, the software application has a mobile no. field.
+
+Now, below are the Error Guessing technique:
+
+- What will be the result if the mobile no. is left blank?
+- What will be the result if any character other than a numeral is entered?
+- What will be the result if less than 10 numerals are entered?
+
+White Box Testing::
+1.Statement Coverage:
+Statement coverage is a white box test design technique which involves execution of all the executable statements in the source code at least once. It is used to calculate and measure the number of statements in the source code which can be executed given the requirements.
+
+ statement coverage = Number of executed statements 
+                                                                                                              *100
+                                                Total number of statements
+Example:
+
+Printsum (int a, int b) {                     
+   int result = a+ b; 
+if (result > 0)
+    	Print ("Positive", result)
+    else
+    	Print ("Negative", result)
+    }                                      
+
+Scenario 1:
+
+If A = 3, B = 9
+
+1.PrintSum (int a, int b) {                     
+2.  int result = a+ b; 
+3.if (result > 0)
+4.   	Print ("Positive", result)
+5. else
+6.  	Print ("Negative", result)
+7.   }      
+
+Number of executed statements = 5
+Total number of statements = 7
+
+Statement Coverage: 5/7 = 71%
+                                     
+Scenario 2:
+
+If A = -3, B = -9
+
+1.PrintSum (int a, int b) {                     
+2.  int result = a+ b; 
+3.if (result > 0)
+4.   	Print ("Positive", result)
+5. else
+6.  	Print ("Negative", result)
+7.   } 
+
+Number of executed statements = 6
+Total number of statements = 7
+
+Statement Coverage: 6/7 = 85%
+
+2.Decision Coverage:
+Decision coverage reports the true or false outcomes of each Boolean expression. In this coverage, expressions can sometimes get complicated. Therefore, it is very hard to achieve 100% coverage.
+
+
+
+Example:
+
+Sample(int a) {                       
+  if (a> 5)
+    	a=a*3
+     print (a)
+   }
+
+Scenario 1:
+
+if a = 2
+
+1.Sample(int a) {                       
+2.if (a> 5)
+3.	a=a*3
+4.print (a)
+5.}
+Here the "No" outcome of the decision If (a>5) is checked.
+
+Decision Coverage = 50%
+
+Scenario 2:
+
+if a = 6
+
+1.Sample(int a) {                       
+ 2. if (a> 5)
+ 3. 	 a=a*3
+ 4.    print (a)
+ 5.  }
+Here the "Yes" outcome of the decision If (a>5) is checked.
+
+Decision Coverage = 50%
+
+Test Case
+Value of A
+Output
+Decision Coverage
+1
+2
+2
+50%
+2
+6
+18
+50%
+
+3.Condition Coverage:
+Conditional coverage or expression coverage will reveal how the variables or sub-expressions in the conditional statement are evaluated. In this coverage expressions with logical operands are only considered.
+ 
+
+Example:
+
+
+For the above expression, we have 4 possible combinations
+
+- TT
+- FF
+- TF
+- FT
+Consider the following input
+
+X=3
+
+Y=4
+(x<y)
+TRUE
+Condition Coverage is ¼ = 25%
+A=3
+
+B=4
+(a>b)
+FALSE
+4.Decision-condition coverage:
+
+It states that each boolean variable should be evaluated one time to "true" and one time to "false", and this with affecting the decision's outcome. It means that from a test case to another, changing the value of only one atomic condition will also change the decision's outcome; although with only the two previous tests, it is impossible to know which condition influences the decision's evaluation.
+
+Example:
+
+if ( (A || B) && C )
+{
+           true statements;
+}
+else
+{
+            false statements;
+}
+
+where A, B and C represent boolean expressions.
+
+In order to ensure Condition coverage criteria for this example, A, B and C should be evaluated at least one time "true" and one time "false" during tests, which would be the case with the 2 following tests:
+
+1. A = true  / B = true  / C = true
+2. A = false / B = false / C = false
+In order to ensure Decision coverage criteria, the condition ( (A or B) and C ) should also be evaluated at least one time to "true" and one time to "false". Indeed, in our previous test cases:
+
+1. A = true  / B = true  / C = true 
+2. A = false / B = false / C = false 
+and Decision coverage is also realized.
+
+For a decision with n atomic boolean conditions, we have to find at least n+1 tests in order to be able to ensure Modified condition/decision coverage. As there are 3 atomic boolean conditions (A, B et C) in our example, we can (for instance) choose the following set of tests:
+
+1. A = false / B = false / C = true   --->  decision is evaluated to "false"
+2. A = false / B = true  / C = true   --->  decision is evaluated to "true"
+3. A = false / B = true  / C = false  --->  decision is evaluated to "false"
+4. A = true  / B = false / C = true   --->  decision is evaluated to "true"
+
+5.Multiple-Condition Coverage:
+Condition coverage is correlated to decision coverage as whenever any decision is to be taken, focus will be on number of possible conditions. Condition Coverage is also known as ‘Predicate Coverage’.
+
+Example:
+
+if ( (A || B) && C )
+{
+           true statements;
+}
+else
+{
+            false statements;
+}
+
+An Example: Multiple Condition Coverage
+
+If (A||B)
+
+Then
+
+Print C
+
+There are two Boolean Expressions A and B, so the Multiple Condition Coverage is defined as:
+
+- Test Case1: A=TRUE, B=TRUE
+- Test Case2: A=TRUE, B=FALSE
+- Test Case3: A=FALSE, B=TRUE
+- Test Case4: A=FALSE, B=FALSE
+According to this explanation, there are 4 test cases for 2 conditions. So, for 3 conditions there will be 8 test cases.
+
+Therefore, for n number of conditions, there are 2n tests.
