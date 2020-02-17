@@ -63,7 +63,7 @@ So, there are 3 cause-effect relations in this example:
 (Fire->heat)
 (Sun->sunburn)
 
-
+ 
 
 
 4.Error Guessing::
